@@ -1,0 +1,62 @@
+head	1.2;
+access;
+symbols;
+locks
+	anmolzehra:1.2; strict;
+comment	@ * @;
+
+
+1.2
+date	2017.07.10.10.44.18;	author anmolzehra;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2017.07.03.11.11.52;	author anmolzehra;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@#include"header.h"
+int displaymenu()
+{
+char choice;
+printf("%s:Begin\n",__func__);
+printf("__MAIN__\n");
+printf("C:__compression__\n");
+printf("D:__decompression__\n");
+printf("E:__exit__\n");
+printf("%s: End\n",__func__);
+printf("enter choice\n");
+scanf("%c",&choice);
+return choice;
+}
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d4 1
+a4 1
+int choice;
+d7 3
+a9 3
+printf("1:__compression__\n");
+printf("2:__decompression__\n");
+printf("0:__exit__\n");
+d12 1
+a12 1
+scanf("%d",&choice);
+@

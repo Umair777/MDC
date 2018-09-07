@@ -1,0 +1,340 @@
+head	1.11;
+access;
+symbols;
+locks
+	anmolzehra:1.11; strict;
+comment	@ * @;
+
+
+1.11
+date	2017.07.22.09.57.36;	author anmolzehra;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2017.07.22.09.55.37;	author anmolzehra;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2017.07.22.09.05.22;	author anmolzehra;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2017.07.22.08.36.38;	author anmolzehra;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2017.07.22.08.29.55;	author anmolzehra;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2017.07.22.08.26.58;	author anmolzehra;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2017.07.22.08.19.15;	author anmolzehra;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2017.07.22.08.16.38;	author anmolzehra;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2017.07.22.06.28.51;	author anmolzehra;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2017.07.09.18.57.14;	author anmolzehra;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2017.07.09.17.00.03;	author anmolzehra;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.11
+log
+@*** empty log message ***
+@
+text
+@#include"header.h"
+#include"declarations.h"
+int decompress5(int cfd,char *ekey)
+{
+	unsigned char c,b,ch;
+        unsigned int i,dfd;
+        printf("%s:Begin\n",__func__);
+        printf("Enter the decompression file\n");
+        dfd = openfile("O_WRONLY");
+	while(1)
+	{	c^=c;
+		b^=b;
+		read(cfd,&ch,1);
+		c=ch;
+		b=ch;
+		c >>= 3;
+		printf("c:%d\n",c);
+		if(c == 0x1F)
+		{
+			break;
+		}
+		i=(int)c;
+		printf("Index is:%d\n",i);
+		write(dfd,(ekey+i),1);
+		
+		c^=c;
+		c=b;
+		c <<= 5;
+		c >>= 3;
+
+		b^=b;
+		read(cfd,&ch,1);
+                b=ch;
+                b >>= 6;
+		c|=b;
+		printf("c:%d\n",c);
+		if(c == 0x1F)
+                {
+                        break;
+                }
+                i=(int)c;
+                printf("Index is:%d\n",i);
+                write(dfd,(ekey+i),1);
+
+		c^=c;
+		c=ch;
+		printf("c:%d\n",c);
+		c <<= 2;
+		c >>= 3;
+		printf("c:%d\n",c);
+		if(c == 0x1F)
+                {
+                        break;
+                }
+		i=(int)c;
+                printf("Index is:%d\n",i);
+                write(dfd,(ekey+i),1);
+		
+		c^=c;
+		c=ch;
+		c <<= 7;
+		c >>= 3;
+		
+		read(cfd,&ch,1);
+		b=ch;
+		b >>= 4;
+		c|=b;
+		printf("c:%d\n",c);
+		if(c == 0x1F)
+                {
+                        break;
+                }
+		i=(int)c;
+                printf("Index is:%d\n",i);
+                write(dfd,(ekey+i),1);
+	
+		c^=c;
+		c=ch;
+		c <<= 4;
+		c >>= 3;
+		
+		b^=b;
+		read(cfd,&ch,1);
+		b=ch;
+		b >>= 7;
+		c|=b;
+		printf("c:%d\n",c);
+		if(c == 0x1F)
+                {
+                        break;
+                }
+		i=(int)c;
+                printf("Index is:%d\n",i);
+                write(dfd,(ekey+i),1);
+	
+		c^=c;
+		c=ch;
+		c <<= 1;
+		c >>= 3;			
+		printf("c:%d\n",c);
+		if(c == 0x1F)
+                {
+                        break;
+                }
+		i=(int)c;
+                printf("Index is:%d\n",i);
+                write(dfd,(ekey+i),1);
+		
+		c^=c;
+		c=ch;
+		c <<= 6;
+		c >>= 3;
+		
+		b^=b;
+		read(cfd,&ch,1);
+		b=ch;
+		b >>= 5;
+		c|=b;
+		printf("c:%d\n",c);
+		if(c == 0x1F)
+                {
+                        break;
+                }
+		i=(int)c;
+                printf("Index is:%d\n",i);
+                write(dfd,(ekey+i),1);
+		
+		c^=c;
+		c=ch;
+		c <<= 3;
+		c >>= 3;
+		if(c == 0x1F)
+                {
+                        break;
+                }
+		i=(int)c;
+                printf("Index is:%d\n",i);
+                write(dfd,(ekey+i),1);
+			
+	}	
+	printf("%s:Ends\n",__func__);
+}
+@
+
+
+1.10
+log
+@*** empty log message ***
+@
+text
+@d129 1
+a129 1
+		c=b;
+@
+
+
+1.9
+log
+@*** empty log message ***
+@
+text
+@d127 13
+@
+
+
+1.8
+log
+@*** empty log message ***
+@
+text
+@d17 1
+d36 1
+d50 1
+d68 1
+d87 1
+d100 1
+d119 1
+@
+
+
+1.7
+log
+@c=ch
+@
+text
+@d12 1
+@
+
+
+1.6
+log
+@*** empty log message ***
+@
+text
+@d43 1
+a43 1
+		c=b;
+d56 1
+a56 1
+		c=b;
+d73 1
+a73 1
+		c=b;
+d91 1
+a91 1
+		c=b;
+d103 1
+a103 1
+		c=b;
+@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@d28 1
+a28 1
+		
+d44 1
+@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@d44 1
+a44 2
+		c >>= 1;
+		c <<= 3;
+@
+
+
+1.3
+log
+@code of decompression 5 was written
+@
+text
+@d44 2
+a45 1
+		c <<= 2;
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@d5 114
+a118 1
+	printf("%s:Begin\n",__func__);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 1
+a3 1
+int decompress5()
+@

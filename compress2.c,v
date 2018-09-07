@@ -1,0 +1,323 @@
+head	1.14;
+access;
+symbols;
+locks
+	anmolzehra:1.14; strict;
+comment	@ * @;
+
+
+1.14
+date	2017.07.24.12.32.00;	author anmolzehra;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2017.07.24.12.27.02;	author anmolzehra;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2017.07.24.12.16.55;	author anmolzehra;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2017.07.24.12.15.39;	author anmolzehra;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2017.07.24.12.09.20;	author anmolzehra;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2017.07.24.12.05.56;	author anmolzehra;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2017.07.24.12.03.33;	author anmolzehra;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2017.07.24.09.03.00;	author anmolzehra;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2017.07.24.09.01.57;	author anmolzehra;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2017.07.24.09.00.49;	author anmolzehra;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2017.07.24.08.40.32;	author anmolzehra;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2017.07.24.08.37.25;	author anmolzehra;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2017.07.07.10.51.57;	author anmolzehra;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2017.07.06.10.45.21;	author anmolzehra;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.14
+log
+@removed error in printf 
+used ch to print c rather than ch
+@
+text
+@#include"header.h"
+#include"declarations.h"
+int compress2(int fd,char *ma)
+{
+	unsigned char c,byt,ch,b;
+        int cfd,efd,i;
+        printf("%s:Begins\n",__func__);
+        printf("Enter the name of Compressed file\n");
+        cfd=openfile("O_WRONLY");
+        printf("Enter the name of Encryption file\n");
+        efd=openfile("O_WRONLY");
+        while(1)
+        {
+        byt^=byt;
+        c^=c;
+        read(fd,&ch,1);
+	if(ch == 10)
+	{
+		byt|=0xC0;
+		write(cfd,&byt,1);
+		break;
+	}
+	i=findindex(ch,ma);
+	printf("Index of %c is %d\n",ch,i);
+	sprintf(&c,"%c",i);
+	printf("c is:%d\n",c);
+	c <<= 6;
+	printf("c is:%d\n",c);
+	byt|=c;
+
+	c^=c;
+        read(fd,&ch,1);
+	if(ch == 10)
+	{
+		byt|=0x30;
+		write(cfd,&byt,1);
+		break;
+	}
+	i=findindex(ch,ma);
+	printf("Index of %c is %d\n",ch,i);
+	c=(char)i;
+	c <<= 6;
+	c >>= 2;
+	printf("c is:%d\n",c);
+	byt|=c;
+//	printf("byt is:%d\n",byt);
+	
+	c^=c;
+        read(fd,&ch,1);
+	if(ch == 10)
+	{
+		byt|=0x0C;
+		write(cfd,&byt,1);
+		break;
+	}
+	i=findindex(ch,ma);
+	printf("Index of %c is %d\n",ch,i);
+	c=(char)i;
+	c <<= 6;
+	c >>= 4;
+	printf("c is:%d\n",c);
+	byt|=c;
+
+	c^=c;
+        read(fd,&ch,1);
+	if(ch == 10)
+	{
+		byt|=0x03;
+		write(cfd,&byt,1);
+		break;
+	}
+	i=findindex(ch,ma);
+	printf("Index of %c is %d\n",ch,i);
+	c=(char)i;
+	c <<= 6;
+	c >>= 6;
+	printf("c is:%d\n",ch);
+	byt|=c;
+	write(cfd,&byt,1);
+	}
+	write(efd,ma,strlen(ma));
+
+printf("%s:End",__func__);
+}
+@
+
+
+1.13
+log
+@*** empty log message ***
+@
+text
+@d25 2
+a26 2
+	sprintf(&c,"%d",i);
+	printf("c is:%d\n",ch);
+d28 1
+a28 1
+	printf("c is:%d\n",ch);
+d61 1
+a61 1
+	printf("c is:%d\n",ch);
+@
+
+
+1.12
+log
+@*** empty log message ***
+@
+text
+@d25 1
+a25 1
+	sprintf(&c,"%d",1);
+@
+
+
+1.11
+log
+@removed unnecessary printf statement
+@
+text
+@d26 1
+@
+
+
+1.10
+log
+@write statement to ef2
+@
+text
+@a16 1
+	printf("char read:%c\n",ch);
+@
+
+
+1.9
+log
+@*** empty log message ***
+@
+text
+@d81 1
+@
+
+
+1.8
+log
+@sprint used instead of type cast
+@
+text
+@d17 1
+@
+
+
+1.7
+log
+@*** empty log message ***
+@
+text
+@d25 1
+a25 1
+	c=(char)i;
+@
+
+
+1.6
+log
+@*** empty log message ***
+@
+text
+@d60 1
+a60 1
+	printf("c is:%d\n",
+@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@d27 1
+a27 1
+	printf("c is:%d\n",
+d76 1
+a76 1
+	printf("c is:%d\n",
+@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@d27 1
+d43 1
+d45 1
+d60 1
+d76 1
+@
+
+
+1.3
+log
+@code compress2.c
+@
+text
+@d24 1
+d38 1
+d53 1
+d68 1
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@d5 67
+a71 1
+printf("%s:Begins",__func__);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 1
+a3 1
+int compress2()
+@

@@ -1,0 +1,256 @@
+head	1.11;
+access;
+symbols;
+locks
+	anmolzehra:1.11; strict;
+comment	@ * @;
+
+
+1.11
+date	2017.07.22.07.33.02;	author anmolzehra;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2017.07.14.11.16.26;	author anmolzehra;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2017.07.13.10.59.59;	author anmolzehra;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2017.07.10.09.48.47;	author anmolzehra;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2017.07.09.18.57.17;	author anmolzehra;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2017.07.09.17.26.46;	author anmolzehra;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2017.07.09.17.00.06;	author anmolzehra;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2017.07.09.12.19.38;	author anmolzehra;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2017.07.09.12.19.03;	author anmolzehra;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2017.07.09.12.18.12;	author anmolzehra;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2017.07.04.04.07.37;	author anmolzehra;	state Exp;
+branches;
+next	;
+
+
+desc
+@ok
+ok .
+@
+
+
+1.11
+log
+@added printf statements for ndc nd cl
+@
+text
+@#include"header.h"
+#include"declarations.h"
+int decompression()
+{
+	char *ekey;
+	int cfd,efd,ndc,cl;
+	ekey=(char *)malloc(sizeof(char)*20);
+	if(!ekey)
+	{
+		perror("malloc");
+		exit(EXIT_FAILURE);
+	}
+	printf("%s:Begins",__func__);
+	printf("Enter the name of compressed file\n");
+	cfd=openfile("O_RDONLY");
+	printf("Enter the name of encryption file\n");
+	efd=openfile("O_RDONLY");
+	ekey=createMasterarray(efd);
+	ndc=strlen(ekey);
+	printf("ndc is:%d\n",ndc);
+	cl=codelength(ndc);
+	printf("codelength is:%d\n",cl);
+	lseek(cfd,0,SEEK_SET);
+	printf("%s:End",__func__);
+	switch(cl)
+	{
+		case 2:
+		{
+			decompress2(cfd,ekey);
+			break;
+		}
+
+		case 3:
+		{
+			decompress3(cfd,ekey);
+			break;
+		}
+		case 4:
+		{
+			decompress4(cfd,ekey);
+			break;
+		}
+		case 5:
+		{
+			decompress5(cfd,ekey);
+			break;
+		}
+		case 6:
+		{
+			decompress6(cfd,ekey);
+			break;
+		}
+		case 7:
+		{
+			decompress7(cfd,ekey);
+			break;
+		}
+	}
+	close(cfd);
+	close(efd);
+}
+@
+
+
+1.10
+log
+@*** empty log message ***
+@
+text
+@d20 1
+d22 1
+@
+
+
+1.9
+log
+@*** empty log message ***
+@
+text
+@d57 2
+a58 1
+
+@
+
+
+1.8
+log
+@*** empty log message ***
+@
+text
+@d21 1
+a21 1
+	lseek(efd,0,SEEK_SET);
+@
+
+
+1.7
+log
+@*** empty log message ***
+@
+text
+@d21 1
+@
+
+
+1.6
+log
+@*** empty log message ***
+@
+text
+@d7 6
+@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@d20 1
+a20 1
+			decompress2();
+d26 1
+a26 1
+			decompress3();
+d31 1
+a31 1
+			decompress4();
+d36 1
+a36 1
+			decompress5();
+d41 1
+a41 1
+			decompress6();
+d46 1
+a46 1
+			decompress7();
+@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@d20 28
+a47 1
+		
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d12 1
+a12 1
+	ekey=createmasterarray(efd);
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@d5 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d5 18
+a22 2
+printf("%s:Begins",__func__);
+printf("%s:End",__func__);
+@

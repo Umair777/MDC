@@ -1,0 +1,237 @@
+head	1.13;
+access;
+symbols;
+locks
+	anmolzehra:1.13; strict;
+comment	@ * @;
+
+
+1.13
+date	2017.07.09.17.28.02;	author anmolzehra;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2017.07.07.12.45.28;	author anmolzehra;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2017.07.07.11.42.03;	author anmolzehra;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2017.07.07.10.51.54;	author anmolzehra;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2017.07.07.10.29.42;	author anmolzehra;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2017.07.07.10.27.30;	author anmolzehra;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2017.07.07.10.26.07;	author anmolzehra;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2017.07.06.11.42.12;	author anmolzehra;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2017.07.06.10.48.02;	author anmolzehra;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2017.07.05.13.50.50;	author anmolzehra;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2017.07.04.11.07.22;	author anmolzehra;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2017.07.04.03.54.18;	author anmolzehra;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2017.07.03.11.11.49;	author anmolzehra;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.13
+log
+@*** empty log message ***
+@
+text
+@int displaymenu();
+int compression();
+int decompression();
+char * createMasterarray(int);
+int codelength(int);
+int compress2(int,char *);
+int compress3(int,char *);
+int compress4(int,char *);
+int compress5(int,char *);
+int compress6(int,char *);
+int compress7(int,char *);
+int openfile(char *);
+int findindex(char,char *);
+int decompress2(int,char *);
+int decompress3(int,char *);
+int decompress4(int,char *);
+int decompress5(int,char *);
+int decompress6(int,char *);
+int decompress7(int,char *);
+@
+
+
+1.12
+log
+@*** empty log message ***
+@
+text
+@d14 6
+@
+
+
+1.11
+log
+@*** empty log message ***
+@
+text
+@d12 1
+a12 1
+int umer(char *);
+@
+
+
+1.10
+log
+@*** empty log message ***
+@
+text
+@d12 1
+a12 1
+int openfile(char *);
+@
+
+
+1.9
+log
+@*** empty log message ***
+@
+text
+@d6 6
+a11 6
+int compress2();
+int compress3();
+int compress4();
+int compress5();
+int compress6();
+int compress7();
+@
+
+
+1.8
+log
+@*** empty log message ***
+@
+text
+@d13 1
+a13 1
+int findindex(char,int *);
+@
+
+
+1.7
+log
+@*** empty log message ***
+@
+text
+@d13 1
+a13 1
+int findindex(char ,int *);
+@
+
+
+1.6
+log
+@*** empty log message ***
+@
+text
+@d12 2
+a13 2
+int openfile();
+
+@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@d12 1
+a12 1
+int openfilew();
+@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@d12 2
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d4 8
+a11 1
+char * createMasterarray();
+@
+
+
+1.2
+log
+@vim Test
+@
+text
+@d4 1
+a4 1
+char* createMasterarrar();
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d4 1
+a4 1
+
+@

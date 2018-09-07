@@ -1,0 +1,508 @@
+head	1.13;
+access;
+symbols;
+locks
+	anmolzehra:1.13; strict;
+comment	@ * @;
+
+
+1.13
+date	2017.07.22.10.40.28;	author anmolzehra;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2017.07.22.09.46.22;	author anmolzehra;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2017.07.22.09.41.59;	author anmolzehra;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2017.07.22.09.37.35;	author anmolzehra;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2017.07.22.09.35.54;	author anmolzehra;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2017.07.22.09.33.53;	author anmolzehra;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2017.07.22.07.32.44;	author anmolzehra;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2017.07.21.12.18.19;	author anmolzehra;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2017.07.21.12.11.06;	author anmolzehra;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2017.07.21.11.36.54;	author anmolzehra;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2017.07.21.11.35.11;	author anmolzehra;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2017.07.07.10.52.00;	author anmolzehra;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2017.07.06.10.45.26;	author anmolzehra;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.13
+log
+@*** empty log message ***
+@
+text
+@#include"header.h"
+#include"declarations.h"
+int compress5(int fd,char *ma)
+{
+        unsigned char ch,c,byt,b;
+        int cfd,efd,i;
+	printf("%s:Begins",__func__);
+        printf("Enter the name of compressed file");
+        cfd=openfile("O_WRONLY");
+        printf("Enter the encryption file");
+        efd=openfile("O_WRONLY");
+	while(1)
+	{
+	c^=c;
+	byt^=byt;
+	read(fd,&ch,1);
+	b=ch;
+	if(ch == 10)
+	{
+		byt|=0xF8;
+		write(cfd,&byt,1);
+		break;
+	}
+	i=findindex(ch,ma);
+	printf("Index of %c is %d\n",ch,i);
+	c=(char)i;
+	c <<= 3;
+	byt|=c;
+	printf("byt is:%d\n",byt);
+	
+	c^=c;
+	read(fd,&ch,1);
+	b=ch;
+	if(ch == 10)
+	{
+		byt|=0x07;
+		write(cfd,&byt,1);
+		break;
+	}
+	i=findindex(ch,ma);
+	printf("Index of %c is %d\n",ch,i);
+	c=(char)i;
+	c <<= 3;
+	c >>= 5;
+	byt|=c;
+	printf("byt is:%d\n",byt);
+	write(cfd,&byt,1);
+	
+	byt^=byt;
+	if(b == 10)
+	{
+		byt|=0xC0;
+		write(cfd,&byt,1);
+		break;
+	}
+	i=findindex(ch,ma);
+	c=(char)i;
+	c <<= 6;
+	byt|=c;
+	printf("byt is:%d\n",byt);
+	
+	
+	c^=c;
+	read(fd,&ch,1);
+	b=ch;
+	if(ch == 10)
+	{
+		byt|=0x3E;
+		write(cfd,&byt,1);
+		break;
+	}
+	i=findindex(ch,ma);
+	printf("Index of %c is %d\n",ch,i);
+	c=(char)i;
+	c <<= 3;
+	c >>= 2;
+	byt|=c;
+	printf("byt is:%d\n",byt);
+	
+	
+	c^=c;
+	read(fd,&ch,1);
+	b=ch;
+	if(ch == 10)
+	{
+		byt|=0x01;
+		write(cfd,&byt,1);
+		break;
+	}
+	i=findindex(ch,ma);
+	printf("Index of %c is %d\n",ch,i);
+	c=(char)i;
+	c <<= 3;
+	c >>= 7;
+	byt|=c;
+	printf("byt is:%d\n",byt);	
+	write(cfd,&byt,1);	
+	
+	c^=c;
+	byt^=byt;
+	if(b == 10)
+	{
+		byt|=0xF0;
+		write(cfd,&byt,1);
+		break;
+	}
+	i=findindex(ch,ma);
+	c=(char)i;
+	c <<= 4;
+	byt|=c;
+	printf("byt is:%d\n",byt);
+	
+	
+	c^=c;	
+	read(fd,&ch,1);
+	b=ch;
+	if(ch == 10)
+	{
+		byt|=0x0F;
+		write(cfd,&byt,1);
+		break;
+	}
+	i=findindex(ch,ma);
+	printf("Index of %c is %d\n",ch,i);
+	c=(char)i;
+	c <<= 3;
+	c >>= 4;
+	byt|=c;
+	printf("byt is:%d\n",byt);
+	write(cfd,&byt,1);
+
+	byt^=byt;
+	if(b == 10)
+	{
+		byt|=0x80;
+		write(cfd,&byt,1);
+		break;
+	}
+	i=findindex(ch,ma);
+	c=(char)i;
+	c <<= 7;
+	byt|=c;
+	printf("byt is:%d\n",byt);
+	
+	
+	c^=c;
+	read(fd,&ch,1);
+	b=ch;
+	if(ch == 10)
+	{
+		byt|=0x7C;
+		write(cfd,&byt,1);
+		break;
+	}
+	i=findindex(ch,ma);
+	printf("Index of %c is %d\n",ch,i);
+	c=(char)i;
+	c <<= 3;
+	c >>= 1;
+	byt|=c;
+	printf("byt is:%d\n",byt);	
+	
+	c^=c;
+	read(fd,&ch,1);
+	b=ch;
+	if(ch == 10)
+	{
+		byt|=0x03;
+		write(cfd,&byt,1);
+		break;
+	}
+	i=findindex(ch,ma);
+	printf("Index of %c is %d\n",ch,i);
+	c=(char)i;
+	c <<= 3;
+	c >>= 6;
+	byt|=c;
+	printf("byt is:%d\n",byt);	
+	write(cfd,&byt,1);
+	
+	c^=c;
+	byt^=byt;
+	if(b == 10)
+	{
+		byt|=0xE0;
+		write(cfd,&byt,1);
+		break;
+	}
+	i=findindex(ch,ma);
+	c=(char)i;
+	c <<= 5;
+	byt|=c;
+	printf("byt is:%d\n",byt);
+		
+	c^=c;
+	read(fd,&ch,1);
+//	b=ch;
+	if(ch == 10)
+	{
+		byt|=0x1F;
+		write(cfd,&byt,1);
+		break;
+	}
+	i=findindex(ch,ma);
+	printf("Index of %c is %d\n",ch,i);
+	c=(char)i;
+	c <<= 3;
+	c >>= 3;
+	byt|=c;
+	printf("byt is:%d\n",byt);	
+	write(cfd,&byt,1);	
+	}
+	write(efd,ma,strlen(ma));
+	printf("%s:End\n",__func__);
+}
+@
+
+
+1.12
+log
+@*** empty log message ***
+@
+text
+@a26 1
+	printf("c is %d\n",c);
+a27 1
+	printf("c is %d\n",c);
+@
+
+
+1.11
+log
+@*** empty log message ***
+@
+text
+@d199 1
+a199 1
+	b=ch;
+d216 1
+a216 1
+	printf("%s:End",__func__);
+@
+
+
+1.10
+log
+@*** empty log message ***
+@
+text
+@a208 1
+	b=c;
+@
+
+
+1.9
+log
+@*** empty log message ***
+@
+text
+@d15 1
+a15 1
+	byt^=c;
+@
+
+
+1.8
+log
+@*** empty log message ***
+@
+text
+@d29 1
+@
+
+
+1.7
+log
+@added write command to efile
+@
+text
+@d27 1
+@
+
+
+1.6
+log
+@printing byt
+@
+text
+@d214 1
+@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@d29 1
+d46 1
+d60 2
+d78 2
+d96 1
+d111 2
+d129 1
+d143 2
+d161 1
+d178 1
+d193 2
+a194 1
+	
+d211 1
+@
+
+
+1.4
+log
+@semicolon inserted after read
+@
+text
+@d17 7
+d26 1
+a26 2
+	c=(int)i;
+	b=c;
+d32 7
+d41 1
+a41 2
+	c=(int)i;
+	b=c;
+d48 8
+a55 1
+	c=b;
+d60 8
+a67 1
+	read(fd,&byt,1);
+d70 1
+a70 2
+	c=(int)i;
+	b=c;
+d77 7
+d86 1
+a86 2
+	c=(int)i;
+	b=c;
+d94 8
+a101 1
+	c=b;
+d107 7
+d116 1
+a116 2
+	c=(int)i;
+	b=c;
+d123 8
+a130 1
+	c=b;
+d136 7
+d145 1
+a145 2
+	c=(int)i;
+	b=c;
+d152 7
+d161 1
+a161 2
+	c=(int)i;
+	b=c;
+d169 8
+a176 1
+	c=b;
+d182 7
+d191 1
+a191 1
+	c=(int)i;
+@
+
+
+1.3
+log
+@wrote code for compression
+@
+text
+@d16 1
+a16 1
+	read(fd,&ch,1)
+d25 1
+a25 1
+	read(fd,&ch,1)
+d51 1
+a51 1
+	read(fd,&ch,1)
+d68 1
+a68 1
+	read(fd,&ch,1)
+d84 1
+a84 1
+	read(fd,&ch,1)
+d94 1
+a94 1
+	read(fd,&ch,1)
+d111 1
+a111 1
+	read(fd,&ch,1)
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@d5 117
+a121 2
+printf("%s:Begins",__func__);
+printf("%s:End",__func__);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 1
+a3 1
+int compress5()
+@

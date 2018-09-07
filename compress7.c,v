@@ -1,0 +1,300 @@
+head	1.3;
+access;
+symbols;
+locks
+	anmolzehra:1.3; strict;
+comment	@ * @;
+
+
+1.3
+date	2017.07.29.06.37.03;	author anmolzehra;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2017.07.07.10.52.02;	author anmolzehra;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2017.07.06.10.45.28;	author anmolzehra;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@#include"header.h"
+#include"declarations.h"
+int compress7(int fd,char *ma)
+{
+	unsigned char ch,c,byt,b;
+        int cfd,efd,i;
+        printf("%s:Begins",__func__);
+        printf("Enter the name of compressed file");
+        cfd=openfile("O_WRONLY");
+        printf("Enter the encryption file");
+        efd=openfile("O_WRONLY");
+        while(1)
+        {
+        c^=c;
+        byt^=byt;
+        read(fd,&ch,1);
+        b=ch;
+        if(ch == 10)
+        {
+                byt|=0xFE;
+                write(cfd,&byt,1);
+                break;
+        }
+        i=findindex(ch,ma);
+        printf("Index of %c is %d\n",ch,i);
+        c=(char)i;
+        c <<= 1;
+        byt|=c;
+        printf("byt is:%d\n",byt);
+	
+	c^=c;
+        read(fd,&ch,1);
+        b=ch;
+        if(ch == 10)
+        {
+                byt|=0x01;
+                write(cfd,&byt,1);
+                break;
+        }
+        i=findindex(ch,ma);
+        printf("Index of %c is %d\n",ch,i);
+        c=(char)i;
+        c <<= 1;
+	c >>= 7;
+        byt|=c;
+	write(cfd,&byt,1);
+	
+	byt^=byt;
+	 if(b == 10)
+        {
+                byt|=0xFC;
+                write(cfd,&byt,1);
+                break;
+        }
+        i=findindex(ch,ma);
+        c=(char)i;
+        c <<= 2;
+        byt|=c;
+        printf("byt is:%d\n",byt);
+
+	c^=c;
+	b^=b;
+        read(fd,&ch,1);
+        b=ch;
+        if(ch == 10)
+        {
+                byt|=0x03;
+                write(cfd,&byt,1);
+                break;
+        }
+        i=findindex(ch,ma);
+        printf("Index of %c is %d\n",ch,i);
+        c=(char)i;
+        c <<= 1;
+	c >>= 6;
+	byt|=c;
+	write(cfd,&byt,1);
+	
+	byt^=byt;
+	c^=c;
+	if(b == 10)
+        {
+                byt|=0xF8;
+                write(cfd,&byt,1);
+                break;
+        }
+        i=findindex(ch,ma);
+        c=(char)i;
+        c <<= 3;
+        byt|=c;
+        printf("byt is:%d\n",byt);
+	
+	c^=c;
+	b^=b;
+        read(fd,&ch,1);
+        b=ch;
+        if(ch == 10)
+        {
+                byt|=0x07;
+                write(cfd,&byt,1);
+                break;
+        }
+        i=findindex(ch,ma);
+        printf("Index of %c is %d\n",ch,i);
+        c=(char)i;
+        c <<= 1;
+	c >>= 5;
+	byt|=c;
+	write(cfd,&byt,1);
+	
+	byt^=byt;
+	c^=c;
+	if(b == 10)
+        {
+                byt|=0xF0;
+                write(cfd,&byt,1);
+                break;
+        }
+        i=findindex(ch,ma);
+        c=(char)i;
+        c <<= 4;
+        byt|=c;
+        printf("byt is:%d\n",byt);
+	
+	c^=c;
+	b^=b;
+        read(fd,&ch,1);
+        b=ch;
+        if(ch == 10)
+        {
+                byt|=0x0F;
+                write(cfd,&byt,1);
+                break;
+        }
+        i=findindex(ch,ma);
+        printf("Index of %c is %d\n",ch,i);
+        c=(char)i;
+        c <<= 1;
+	c >>= 4;
+	byt|=c;	
+	write(cfd,&byt,1);
+
+	byt^=byt;
+	c^=c;
+	if(b == 10)
+        {
+                byt|=0xE0;
+                write(cfd,&byt,1);
+                break;
+        }
+        i=findindex(ch,ma);
+        c=(char)i;
+        c <<= 5;
+        byt|=c;
+        printf("byt is:%d\n",byt);
+	
+	
+	c^=c;
+	b^=b;
+        read(fd,&ch,1);
+        b=ch;
+        if(ch == 10)
+        {
+                byt|=0x1F;
+                write(cfd,&byt,1);
+                break;
+        }
+        i=findindex(ch,ma);
+        printf("Index of %c is %d\n",ch,i);
+        c=(char)i;
+        c <<= 1;
+	c >>= 3;
+	byt|=c;
+	write(cfd,&byt,1);
+		
+	byt^=byt;
+	c^=c;
+	if(b == 10)
+        {
+                byt|=0xC0;
+                write(cfd,&byt,1);
+                break;
+        }
+        i=findindex(ch,ma);
+        c=(char)i;
+        c <<= 6;
+        byt|=c;
+        printf("byt is:%d\n",byt);
+		
+	c^=c;
+	b^=b;
+        read(fd,&ch,1);
+        b=ch;
+        if(ch == 10)
+        {
+                byt|=0x3F;
+                write(cfd,&byt,1);
+                break;
+        }
+        i=findindex(ch,ma);
+        printf("Index of %c is %d\n",ch,i);
+        c=(char)i;
+        c <<= 1;
+	c >>= 2;
+	byt|=c;
+	write(cfd,&byt,1);
+	
+	byt^=byt;
+	c^=c;
+	if(b == 10)
+        {
+                byt|=0x80;
+                write(cfd,&byt,1);
+                break;
+        }
+        i=findindex(ch,ma);
+        c=(char)i;
+        c <<= 7;
+	byt|=c;
+        printf("byt is:%d\n",byt);
+	
+	c^=c;
+	b^=b;
+        read(fd,&ch,1);
+        b=ch;
+        if(ch == 10)
+        {
+                byt|=0x7F;
+                write(cfd,&byt,1);
+                break;
+        }
+        i=findindex(ch,ma);
+        printf("Index of %c is %d\n",ch,i);
+        c=(char)i;
+        c <<= 1;
+	c >>= 1;
+	byt|=c;
+        printf("byt is:%d\n",byt);
+	write(cfd,&byt,1);
+	}
+	write(efd,ma,strlen(ma));
+	printf("%s:End",__func__);
+}
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@d5 238
+a242 2
+printf("%s:Begins",__func__);
+printf("%s:End",__func__);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 1
+a3 1
+int compress7()
+@

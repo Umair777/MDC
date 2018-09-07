@@ -1,0 +1,91 @@
+head	1.4;
+access;
+symbols;
+locks
+	anmolzehra:1.4; strict;
+comment	@ * @;
+
+
+1.4
+date	2017.07.13.10.34.31;	author anmolzehra;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2017.07.10.10.36.08;	author anmolzehra;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2017.07.07.17.39.43;	author anmolzehra;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2017.07.07.10.26.12;	author anmolzehra;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@#include"header.h"
+#include"declarations.h"
+int findindex(char ch,char *ma)
+{
+	int i,ndc;
+	ndc=strlen(ma);
+	for(i=0;i<ndc;i++)
+	{
+		if(ch ==*(ma+i))
+		{
+			break;
+		}
+
+	} 	
+	return i;
+}
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d9 1
+a9 1
+		if(ch==*(ma+i))
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@a5 1
+	printf("%s:Begins",__func__);
+d14 1
+a14 2
+	} 
+	printf("%s:End",__func__);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d8 1
+a8 1
+	for(i=0;i<=ndc;i++)
+@

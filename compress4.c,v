@@ -1,0 +1,1054 @@
+head	1.49;
+access;
+symbols;
+locks
+	anmolzehra:1.49; strict;
+comment	@ * @;
+
+
+1.49
+date	2017.07.15.11.19.41;	author anmolzehra;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2017.07.15.09.24.02;	author anmolzehra;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2017.07.14.11.37.59;	author anmolzehra;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2017.07.14.11.27.39;	author anmolzehra;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2017.07.14.10.51.23;	author anmolzehra;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2017.07.14.10.10.02;	author anmolzehra;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2017.07.14.10.08.07;	author anmolzehra;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2017.07.14.10.05.21;	author anmolzehra;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2017.07.14.09.56.35;	author anmolzehra;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2017.07.14.09.54.54;	author anmolzehra;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2017.07.14.06.15.25;	author anmolzehra;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2017.07.14.06.13.07;	author anmolzehra;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2017.07.14.06.10.23;	author anmolzehra;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2017.07.14.06.05.54;	author anmolzehra;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2017.07.14.05.58.14;	author anmolzehra;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2017.07.14.05.57.07;	author anmolzehra;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2017.07.13.12.03.57;	author anmolzehra;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2017.07.13.12.02.22;	author anmolzehra;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2017.07.13.10.55.54;	author anmolzehra;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2017.07.13.10.46.15;	author anmolzehra;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2017.07.13.10.43.22;	author anmolzehra;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2017.07.13.10.40.50;	author anmolzehra;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2017.07.13.10.36.56;	author anmolzehra;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2017.07.13.10.32.55;	author anmolzehra;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2017.07.13.10.28.58;	author anmolzehra;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2017.07.13.10.25.25;	author anmolzehra;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2017.07.13.10.14.05;	author anmolzehra;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2017.07.13.10.08.20;	author anmolzehra;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2017.07.11.11.28.28;	author anmolzehra;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2017.07.11.11.15.48;	author anmolzehra;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2017.07.11.11.02.44;	author anmolzehra;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2017.07.11.10.54.31;	author anmolzehra;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2017.07.11.10.48.05;	author anmolzehra;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2017.07.11.10.43.24;	author anmolzehra;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2017.07.11.10.40.34;	author anmolzehra;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2017.07.11.10.38.37;	author anmolzehra;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2017.07.10.10.49.28;	author anmolzehra;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2017.07.07.13.09.32;	author anmolzehra;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2017.07.07.12.38.03;	author anmolzehra;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2017.07.07.12.25.27;	author anmolzehra;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2017.07.07.12.05.39;	author anmolzehra;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2017.07.07.11.56.49;	author anmolzehra;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2017.07.07.11.50.33;	author anmolzehra;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2017.07.07.11.42.05;	author anmolzehra;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2017.07.07.11.05.23;	author anmolzehra;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2017.07.07.10.54.09;	author anmolzehra;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2017.07.07.10.26.10;	author anmolzehra;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2017.07.06.11.42.14;	author anmolzehra;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2017.07.05.13.50.52;	author anmolzehra;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.49
+log
+@*** empty log message ***
+@
+text
+@#include"header.h"
+#include"declarations.h" 
+int compress4(int fd,char *ma)
+{
+	printf("%s:Begins\n",__func__);
+	unsigned char c,byt;
+	unsigned char ch;
+	int cfd,efd,i;
+	printf("Enter the name of compressed file");
+	cfd=openfile("O_WRONLY");
+	printf("Enter the encryption file");
+	efd=openfile("O_WRONLY");
+	while(1)
+	{
+		c^=c;
+		byt^=byt;
+		read(fd,&ch,1);
+		if (ch == 10)
+		{
+			byt=byt|0xF0;
+			write(cfd,&byt,1);
+			break;
+		}
+		i=findindex(ch,ma);	
+		printf("index of %c is : %d\n",ch,i);
+		c=(char)i;
+		c <<= 4;
+		byt=byt|c;
+		read(fd,&ch,1);
+		if (ch == 10)
+		{
+			byt=byt|0x0F;
+			write(cfd,&byt,1);
+			break;
+		}
+		i=findindex(ch,ma);
+		printf("index of %c is : %d\n",ch,i);
+		c=(char)i;
+		c <<= 4;
+		c >>= 4;
+		byt=byt|c;
+		printf("byt=%d\n",byt);
+		write(cfd,&byt,1);
+	}
+	write(efd,ma,strlen(ma));
+	printf("%s:End\n",__func__);
+	close(cfd);
+	close(efd);
+	return 0;
+}
+@
+
+
+1.48
+log
+@*** empty log message ***
+@
+text
+@a26 1
+//		printf("%d\n",c);
+a27 1
+//		printf("%d\n",c);
+a28 1
+//		printf("byt=%d\n",byt);
+a38 1
+//		printf("%d\n",c);
+a39 1
+//		printf("%d\n",c);
+a40 1
+//		printf("%d\n",c);
+@
+
+
+1.47
+log
+@*** empty log message ***
+@
+text
+@d20 1
+a20 1
+			byt=byt|0x0F;
+d33 6
+a38 6
+//		if (ch == 10)
+//		{
+//			byt=byt|0x0F;
+//			write(cfd,&byt,1);
+//			break;
+//		}
+@
+
+
+1.46
+log
+@*** empty log message ***
+@
+text
+@d55 1
+@
+
+
+1.45
+log
+@*** empty log message ***
+@
+text
+@d33 6
+a38 6
+		if (ch == 10)
+		{
+			byt=byt|0x0F;
+			write(cfd,&byt,1);
+			break;
+		}
+@
+
+
+1.44
+log
+@*** empty log message ***
+@
+text
+@d53 2
+@
+
+
+1.43
+log
+@*** empty log message ***
+@
+text
+@d31 1
+a31 1
+		printf("byt=%d\n",byt);
+@
+
+
+1.42
+log
+@*** empty log message ***
+@
+text
+@d26 2
+a27 2
+		c=(char)ch;
+		printf("%d\n",c);
+d29 1
+a29 1
+		printf("%d\n",c);
+d31 1
+a31 1
+//		printf("byt=%d\n",byt);
+d41 1
+a41 1
+		c=(char)ch;
+@
+
+
+1.41
+log
+@*** empty log message ***
+@
+text
+@d27 1
+a27 1
+//		printf("%c\n",c);
+d29 1
+a29 1
+//		printf("%c\n",c);
+d42 1
+a42 1
+//		printf("%c\n",c);
+d44 1
+a44 1
+//		printf("%c\n",c);
+d46 1
+a46 1
+//		printf("%c\n",c);
+@
+
+
+1.40
+log
+@*** empty log message ***
+@
+text
+@d7 1
+a7 1
+	char ch;
+@
+
+
+1.39
+log
+@*** empty log message ***
+@
+text
+@d26 1
+a26 1
+		sprintf(&c,"%d",i);
+d41 1
+a41 1
+		sprintf(&c,"%d",i);
+@
+
+
+1.38
+log
+@*** empty log message ***
+@
+text
+@d31 1
+a31 1
+		printf("byt=%d\n",byt);
+@
+
+
+1.37
+log
+@*** empty log message ***
+@
+text
+@d31 1
+a31 1
+//		printf("byt=%d\n",byt);
+@
+
+
+1.36
+log
+@*** empty log message ***
+@
+text
+@d40 1
+a40 1
+//		printf("index of %c is : %d\n",ch,i);
+@
+
+
+1.35
+log
+@*** empty log message ***
+@
+text
+@d6 2
+a7 1
+	unsigned char c,byt,ch;
+@
+
+
+1.34
+log
+@*** empty log message ***
+@
+text
+@d24 1
+a24 1
+//		printf("index of %c is : %d\n",ch,i);
+@
+
+
+1.33
+log
+@*** empty log message ***
+@
+text
+@d6 1
+a6 1
+	char c,byt,ch;
+d18 3
+d22 1
+d24 1
+a24 1
+		printf("index of %c is : %d\n",ch,i);
+d26 1
+a26 1
+		printf("%c\n",c);
+d28 1
+a28 1
+		printf("%c\n",c);
+d30 1
+a30 1
+		printf("%c\n",byt);
+d39 1
+a39 1
+		printf("index of %c is : %d\n",ch,i);
+d41 1
+a41 1
+		printf("%c\n",c);
+d43 1
+a43 1
+		printf("%c\n",c);
+d45 1
+a45 1
+		printf("%c\n",c);
+d47 1
+a47 1
+		printf("%c\n",byt);
+@
+
+
+1.32
+log
+@*** empty log message ***
+@
+text
+@d22 1
+a22 1
+		printf("%c",c);
+d24 1
+a24 1
+		printf("%c",c);
+d26 1
+a26 1
+		printf("%c",byt);
+d37 1
+a37 1
+		printf("%c",c);
+d39 1
+a39 1
+		printf("%c",c);
+d41 1
+a41 1
+		printf("%c",c);
+d43 1
+a43 1
+		printf("%c",byt);
+@
+
+
+1.31
+log
+@*** empty log message ***
+@
+text
+@d22 1
+d24 1
+d26 1
+d37 1
+d39 1
+d41 1
+d43 1
+@
+
+
+1.30
+log
+@*** empty log message ***
+@
+text
+@d24 1
+a24 1
+		read(cfd,&ch,1);
+d37 1
+a37 1
+		write(fd,&byt,1);
+@
+
+
+1.29
+log
+@*** empty log message ***
+@
+text
+@d3 1
+a3 1
+int compress4(int def,char *ma)
+d16 1
+a16 1
+		read(cfd,&ch,1);
+d37 1
+a37 1
+		write(cfd,&byt,1);
+@
+
+
+1.28
+log
+@*** empty log message ***
+@
+text
+@a17 1
+		{
+a18 1
+		}
+@
+
+
+1.27
+log
+@*** empty log message ***
+@
+text
+@a23 1
+		printf("ch1 is:%c\n",c);
+a24 1
+		printf("ch2 is:%c\n",c);
+a25 1
+		printf("byt is:%c\n",byt);
+a35 1
+		printf("ch1 is:%c\n",c);
+a36 1
+		printf("ch2 is:%c\n",c);
+a37 1
+		printf("ch3 is:%c\n",c);
+a38 1
+		printf("byt is:%c\n",byt);
+@
+
+
+1.26
+log
+@*** empty log message ***
+@
+text
+@d17 1
+a17 1
+		if (ch ==10)
+d25 1
+a25 1
+		c <<=4;
+d30 1
+a30 1
+		if (ch ==10)
+d40 1
+a40 1
+		c <<=4;
+d42 1
+a42 1
+		c >>=4;
+@
+
+
+1.25
+log
+@*** empty log message ***
+@
+text
+@d25 1
+a25 1
+		c <<= 4;
+d40 1
+a40 1
+		c <<= 4;
+d42 1
+a42 1
+		c >>= 4;
+@
+
+
+1.24
+log
+@*** empty log message ***
+@
+text
+@d17 1
+a17 1
+		if (ch == 10)
+d30 1
+a30 1
+		if (ch == 10)
+@
+
+
+1.23
+log
+@*** empty log message ***
+@
+text
+@a35 4
+		if(ch == 10)
+		{
+			break;
+		}
+@
+
+
+1.22
+log
+@*** empty log message ***
+@
+text
+@d16 1
+a16 1
+		read(def,&ch,1);
+d29 1
+a29 1
+		read(def,&ch,1);
+@
+
+
+1.21
+log
+@*** empty log message ***
+@
+text
+@d3 1
+a3 1
+int compress4(int fd,char *ma)
+d16 1
+a16 1
+		read(fd,&ch,1);
+d29 1
+a29 1
+		read(fd,&ch,1);
+@
+
+
+1.20
+log
+@*** empty log message ***
+@
+text
+@a11 2
+	c='0';
+	byt='0';
+@
+
+
+1.19
+log
+@*** empty log message ***
+@
+text
+@a20 2
+			byt=byt|0x0F;
+			write(cfd,&byt,1);
+d32 6
+@
+
+
+1.18
+log
+@*** empty log message ***
+@
+text
+@d29 1
+a29 1
+		c <<=4;
+d42 1
+a42 1
+		c <<=4;
+d44 1
+a44 1
+		c >>=4;
+@
+
+
+1.17
+log
+@*** empty log message ***
+@
+text
+@d28 1
+a28 1
+		printf("ch is:%c",c);
+d30 1
+a30 1
+		printf("ch is:%c",c);
+d41 1
+d43 1
+d45 1
+@
+
+
+1.16
+log
+@*** empty log message ***
+@
+text
+@d28 1
+d30 1
+d32 1
+a32 1
+		printf("%c\n",byt);
+d44 1
+a44 1
+		printf("%c\n",byt);
+@
+
+
+1.15
+log
+@*** empty log message ***
+@
+text
+@d30 1
+d42 1
+@
+
+
+1.14
+log
+@*** empty log message ***
+@
+text
+@d12 2
+a13 2
+	c=0;
+	byt=0;
+@
+
+
+1.13
+log
+@*** empty log message ***
+@
+text
+@d12 2
+@
+
+
+1.12
+log
+@*** empty log message ***
+@
+text
+@d19 2
+@
+
+
+1.11
+log
+@*** empty log message ***
+@
+text
+@d24 1
+a24 1
+		c<<=4;
+d34 2
+a35 2
+		c<<=4;
+		c>>=4;
+@
+
+
+1.10
+log
+@*** empty log message ***
+@
+text
+@d9 1
+a9 1
+	cfd=openfile("O_RDONLY");
+d11 1
+a11 1
+	efd=openfile("O_RDONLY");
+@
+
+
+1.9
+log
+@*** empty log message ***
+@
+text
+@d17 1
+a17 1
+		if(ch==10)
+d23 15
+d39 1
+@
+
+
+1.8
+log
+@*** empty log message ***
+@
+text
+@d5 1
+a5 1
+	printf("%s\n:Begins",__func__);
+d24 1
+a24 1
+	printf("%s\n:End",__func__);
+@
+
+
+1.7
+log
+@*** empty log message ***
+@
+text
+@a7 1
+	ma = createMasterarray(fd);
+@
+
+
+1.6
+log
+@*** empty log message ***
+@
+text
+@d10 1
+a10 1
+	cfd=umer("O_RDONLY");
+d12 1
+a12 1
+	efd=umer("O_RDONLY");
+@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+#include"declarations.h"
+d5 9
+a13 14
+printf("%s\n:Begins",__func__);
+char c,byt,ch;
+int cfd,efd,i;
+ma = createMasterarray(fd);
+printf("Enter the name of compressed file");
+cfd=openfile("O_RDONLY");
+printf("Enter the encryption file");
+efd=openfile("O_RDONLY");
+while(1)
+{
+	c^=c;
+	byt^=byt;
+	read(fd,&ch,1);
+	if(ch==10)
+d15 9
+a23 1
+		break;
+d25 1
+a25 4
+	i=findindex(ch,ma);	
+	printf("index of %c is : %d\n",ch,i);
+}
+printf("%s\n:End",__func__);
+@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@d12 1
+a12 1
+efd=openfile(O_RDONLY);
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d12 1
+a12 1
+efd=openfile("O_RDONLY");
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@d3 1
+a3 1
+int compress4()
+d5 7
+a11 5
+printf("%s:Begins",__func__);
+char c,byt;
+int cfd,efd;
+c^=c;
+byt^=byt;
+d13 13
+a25 2
+cfd=openfile("O_WRONLY");
+printf("%s:End",__func__);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d10 2
+a11 2
+efd=openfilew();
+cfd=openfilew();
+@

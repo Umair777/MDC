@@ -1,0 +1,81 @@
+head	1.2;
+access;
+symbols;
+locks
+	anmolzehra:1.2; strict;
+comment	@ * @;
+
+
+1.2
+date	2017.07.10.10.44.19;	author anmolzehra;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2017.07.03.11.11.53;	author anmolzehra;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@#include"header.h"
+#include"declarations.h"
+int main()
+{
+	char ret;
+	ret=displaymenu();
+	switch(ret)
+{
+	case 'C':
+	{
+		compression();
+		break;
+	}
+
+	case 'D':
+	{
+		decompression();
+		break;
+	}
+
+	case 'E':
+	{
+		exit(EXIT_SUCCESS);
+		break;
+	}
+
+}
+	
+	
+	return 0;
+}
+
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d5 1
+a5 1
+	int ret;
+d9 1
+a9 1
+	case 1:
+d15 1
+a15 1
+	case 2:
+d21 1
+a21 1
+	case 0:
+@
